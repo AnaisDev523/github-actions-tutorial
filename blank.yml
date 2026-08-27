@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    env:
+      platform: aws
+      region: us-east-1
+      account: 123456789012
+      username: ${{ secrets.USERNAME }}
+      password: ${{ secrets.PASSWORD }}
+      project_version: ${{ vars.PROJECT_VERSION }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Mostrar mensaje"
+        run: echo "Hola mundo"
+
+      - name: "Mostrando variables de entorno"
+        run: |
+          echo "Esto es el valor de platform: ${{ env.platform }}"
+          echo "Esto es el valor de region: ${{ env.region }}"
+          echo "Esto es el valor de account: ${{ env.account }}"
+          echo "Esto es el valor de username: ${{ env.username }}"
+          echo "Esto es el valor de password: ${{ env.password }}"
+          echo "Project version ${{ env.project_version }}"
