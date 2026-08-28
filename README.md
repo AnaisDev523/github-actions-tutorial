@@ -3,10 +3,8 @@
 Actividad: configuración de Integración Continua (CI) con GitHub Actions.
 
 ## Integrantes
-- Integrante 1: COMPLETAR NOMBRE
-- Integrante 2: COMPLETAR NOMBRE
-- Integrante 3: COMPLETAR NOMBRE
-- Integrante 4: COMPLETAR NOMBRE
+- Integrante 1: ANAIS MILENKS HUILLCA ROJAS 
+
 
 ## Qué se implementó
 - Workflow `CI`.
